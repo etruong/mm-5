@@ -1,3 +1,61 @@
+/* Pulsing CSS: */
+
+/* Big Circle Hover Animation */
+
+/* Card Flip CSS: */
+
+/* Student Gallery Section */
+#student-gallery {
+    padding: 20px;
+}
+
+h2 {
+    font-size: 20pt;
+    text-align: center;
+}
+
+#student-gallery div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.front img {
+    max-height: 200px;
+}
+
+.front p {
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+}
+
+.back h3 {
+    margin-bottom: 0;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+}
+
+.back ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
+    height: 50%;
+}
+
+.back * {
+    height: fit-content;
+    width: 100%;
+}
+
+/* General Styling: */
 body, html {
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     background-color: beige;
@@ -53,310 +111,4 @@ button:hover {
 
 i {
     font-size: 20pt;
-}
-
-/* Pulsing CSS: */
-.circle-container {
-    width: 160px;
-    height: 160px;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-}
-
-.in-circle, .out-circle {
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
-}
-
-.in-circle {
-    position: relative;
-    transition: background-color 1s;
-}
-
-#html-btn .in-circle:hover, #css-btn .in-circle:hover,
-#js-btn .in-circle:hover, #python-btn .in-circle:hover {
-    background-color: white;
-    cursor: pointer;
-}
-
-.out-circle {
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-}
-
-/* Big Circle Hover Animation */
-.bg-circle {
-    width: 100px;
-    height: 100px;
-    border-radius: 100px;
-    position: absolute;
-}
-
-.enlarge-circle {
-    animation: enlarge 1s forwards;
-}
-
-.minimize-circle {
-    animation: minimize 0.3s forwards;
-}
-
-@keyframes enlarge {
-    from {
-        transform: none;
-    }
-    to {
-        transform: scale(5);
-    }
-}
-
-@keyframes minimize {
-    0% {
-        transform: scale(5);
-    }
-    100% {
-        transform: scale(0.1);
-        visibility: hidden;
-    }
-}
-
-/* Unique styling for HTML btn */
-#html-btn .circle-container {
-    top: 10%;
-    left: 15%;
-}
-
-#html-btn .bg-circle {
-    background-color: rgba(173,216,230, 0.8);
-    /* x-offset, y-offset */
-    transform-origin: 70px 70px;
-    top: 10%;
-    left: 18%;
-}
-
-#html-btn .in-circle {
-    background-color: rgba(173,216,230, 0.9);
-}
-
-#html-btn .out-circle {
-    animation-name: html-pulse;
-}
-
-@keyframes html-pulse {
-    0% {
-        padding: 0;
-        border: 1px solid rgba(173,216,230, 1);
-    }
-    20% {
-        padding: 30px;
-        border: 1px solid rgba(173,216,230, 0);
-    }
-    100% {
-        padding: 30px;
-        border: 1px solid rgba(173,216,230, 0);
-    }
-}
-
-/* Unique styling for CSS btn */
-#css-btn .circle-container {
-    top: 60%;
-    left: 5%;
-}
-
-#css-btn .bg-circle {
-    background-color: rgba(255,153,153, 0.8);
-    /* x-offset, y-offset */
-    transform-origin: 40px 15px;
-    top: 65%;
-    left: 10%;
-}
-
-#css-btn .in-circle {
-    background-color: rgba(255,153,153, 0.9);
-}
-
-#css-btn .out-circle {
-    animation-name: css-pulse;
-}
-
-@keyframes css-pulse {
-    0% {
-        padding: 0;
-        border: 1px solid rgba(255,153,153, 1);
-    }
-    20% {
-        padding: 30px;
-        border: 1px solid rgba(255,153,153, 0);
-    }
-    100% {
-        padding: 30px;
-        border: 1px solid rgba(255,153,153, 0);
-    }
-}
-
-/* Unique styling for JS btn */
-#js-btn .circle-container {
-    top: 50%;
-    right: 10%;
-}
-
-#js-btn .bg-circle {
-    background-color: rgba(153, 255, 204, 0.8);
-    /* x-offset, y-offset */
-    transform-origin: 55px 15px;
-    top: 56%;
-    right: 12%;
-}
-
-#js-btn .in-circle {
-    background-color: rgba(153, 255, 204, 0.9);
-}
-
-#js-btn .out-circle {
-    animation-name: js-pulse;
-}
-
-@keyframes js-pulse {
-    0% {
-        padding: 0;
-        border: 1px solid rgba(153, 255, 204, 1);
-    }
-    20% {
-        padding: 30px;
-        border: 1px solid rgba(153, 255, 204, 0);
-    }
-    100% {
-        padding: 30px;
-        border: 1px solid rgba(153, 255, 204, 0);
-    }
-}
-
-/* Unique styling for Python btn */
-#python-btn .circle-container {
-    top: 10%;
-    right: 20%;
-}
-
-#python-btn .bg-circle {
-    background-color: rgba(255, 204, 153, 0.8);
-    /* x-offset, y-offset */
-    transform-origin: 30px 50px;
-    top: 10%;
-    right: 20%;
-}
-
-#python-btn .in-circle {
-    background-color: rgba(255, 204, 153, 0.9);
-}
-
-#python-btn .out-circle {
-    animation-name: python-pulse;
-}
-
-@keyframes python-pulse {
-    0% {
-        padding: 0;
-        border: 1px solid rgba(255, 204, 153, 1);
-    }
-    20% {
-        padding: 30px;
-        border: 1px solid rgba(255, 204, 153, 0);
-    }
-    100% {
-        padding: 30px;
-        border: 1px solid rgba(255, 204, 153, 0);
-    }
-}
-
-/* Student Gallery Section */
-#student-gallery {
-    padding: 20px;
-}
-
-h2 {
-    font-size: 20pt;
-    text-align: center;
-}
-
-#student-gallery div {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.front img {
-    max-height: 200px;
-}
-
-.front p {
-    text-align: center;
-    font-weight: bold;
-    margin: 0;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 5px;
-}
-
-.back h3 {
-    margin-bottom: 0;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    height: auto;
-}
-
-.back ul {
-    list-style-type: none;
-    padding: 0;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    text-align: center;
-    height: 50%;
-}
-
-.back * {
-    height: fit-content;
-    width: 100%;
-}
-
-/* Card Flip CSS: */
-.card-container {
-    margin: 20px;
-    width: 200px;
-    height: 250px;
-}
-
-.card {
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    transition: all 0.8s ease;
-}
-
-.card:hover{
-    transform: rotateY(180deg);
-}
-
-.front, .back {
-    border: 1px solid black;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    overflow: hidden;
-    border-radius: 10px;
-}
-
-.front {
-    background-color: lightblue;
-}
-
-.back {
-    transform: rotateY(180deg);
-    background-color: salmon;
 }
